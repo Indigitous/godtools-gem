@@ -1,0 +1,8 @@
+HTTP/1.1 204 No Content
+Authorization: 13cd25519b7996c8a4aabaf12aa62aa644094960
+Content-Length: 0
+Date: Thu, 02 Apr 2015 00:30:04 GMT
+Server: WildFly/8
+X-Powered-By: Undertow/1
+Connection: keep-alive
+

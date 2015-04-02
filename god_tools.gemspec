@@ -6,10 +6,16 @@ Gem::Specification.new do |s|
   s.description = 'For more about the API see https://github.com/CruGlobal/godtools-api'
   s.authors     = ['Sheldon Dueck']
   s.email       = 'sheldon@ballistiq.com'
-  s.files       = ['lib/god_tools.rb']
   s.homepage    = 'https://github.com/Indigitous/godtools-gem'
 
-  s.add_dependency('rest-client', '~> 1.8.0')
-  s.add_dependency('json', '~> 1.8.2')
-end
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- test/*`.split("\n")
+  s.require_paths = ['lib']
 
+  s.add_dependency 'rest-client', '~> 1.8.0'
+  s.add_dependency 'json', '~> 1.8.2'
+
+  s.add_development_dependency 'minitest', '~> 5.5.1'
+  s.add_development_dependency 'webmock', '~> 1.21.0'
+  s.add_development_dependency 'pry', '~> 0.10.1'
+end
