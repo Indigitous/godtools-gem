@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Tue, 07 Apr 2015 21:49:10 GMT
+Server: WildFly/8
+X-Powered-By: Undertow/1
+transfer-encoding: chunked
+Connection: keep-alive
+
+{"translatedStrings":{"02cf6004-a0f9-4828-be26-09253d4490b6":"KNOWING GOD","f1c599f5-dccc-4a9d-b81d-030e4cbce6cd":"personally","778006c5-22a7-4abb-b81e-f04499f942e6":"These four points explain how to enter into a personal relationship with God and experience the life for which you were created."}}

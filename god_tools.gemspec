@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- test/*`.split("\n")
   s.require_paths = ['lib']
 
-  s.add_dependency 'rest-client', '~> 1.8.0'
-  s.add_dependency 'json', '~> 1.8.2'
+  s.add_dependency 'httparty', '~> 0.13.3'
+  s.add_dependency 'hashie', '~> 3.4.1'
 
   s.add_development_dependency 'minitest', '~> 5.5.1'
   s.add_development_dependency 'webmock', '~> 1.21.0'

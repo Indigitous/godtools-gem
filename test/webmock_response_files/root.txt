@@ -1,7 +1,0 @@
-HTTP/1.1 404 Not Found
-Date: Thu, 02 Apr 2015 00:44:15 GMT
-Server: WildFly/8
-X-Powered-By: Undertow/1
-Content-Length: 0
-Connection: keep-alive
-
