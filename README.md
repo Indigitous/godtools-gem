@@ -14,9 +14,9 @@ Test are written with MiniTest. Before committing any code you should make sure 
 
 `rake test`
 
-# Usage
+## Usage
 
-## Setup
+### Setup
 
 Add the following to your Gemfile:
 
@@ -44,7 +44,7 @@ Set the API endpoint uri (defaults to a staging server):
 
 `GodTools.base_uri = "http://..."`
 
-## Meta
+### Meta
 
 ```ruby
 response = GodTools::Meta.all
@@ -54,7 +54,7 @@ response.languages.first.code
  => "ta"
 ```
 
-## Translations
+### Translations
 
 ```ruby
 translation = GodTools::Translations.new(language: 'en', package: 'kgp')
