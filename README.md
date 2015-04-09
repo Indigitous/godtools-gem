@@ -32,6 +32,10 @@ require 'god_tools'
  => true
 ```
 
+Set the API endpoint uri (defaults to a staging server):
+
+`GodTools.base_uri = "https://..."`
+
 Now setup the authorization key (required for every request, see API wiki):
 
 `GodTools.authorization_key = "your key here"`
@@ -39,10 +43,6 @@ Now setup the authorization key (required for every request, see API wiki):
 If you don't have a key you can request one (this will also set it automatically):
 
 `GodTools.request_authorization_key!`
-
-Set the API endpoint uri (defaults to a staging server):
-
-`GodTools.base_uri = "http://..."`
 
 ### Meta
 
