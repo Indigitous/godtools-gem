@@ -1,8 +1,8 @@
 module GodTools
-  class Meta < ApiOperation
+  class Meta
 
     def self.all
-      Hashie::Mash.new get '/meta'
+      Hashie::Mash.new GodTools.get '/meta'
     end
 
   end

@@ -1,6 +1,5 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'pry'
 require 'webmock/minitest'
 WebMock.disable_net_connect! allow_localhost: true
 require 'god_tools'

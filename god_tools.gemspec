@@ -17,5 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'minitest', '~> 5.5.1'
   s.add_development_dependency 'webmock', '~> 1.21.0'
-  s.add_development_dependency 'pry', '~> 0.10.1'
+  s.add_development_dependency 'irbtools', '~> 2.0.0'
+  s.add_development_dependency 'irbtools-more', '~> 2.0.0'
+  s.add_development_dependency 'terminal-notifier', '~> 1.6.3'
 end

@@ -1,5 +1,5 @@
 module GodTools
-  class Translations < ApiOperation
+  class Translations
 
     attr_accessor :language, :package
 
@@ -9,11 +9,11 @@ module GodTools
     end
 
     def config
-      Config.new self.class.get "#{ base_path }/config"
+      Config.new GodTools.get "#{ base_path }/config"
     end
 
     def page(page_id)
-      Page.new self.class.get "#{ base_path }/pages/#{ page_id }"
+      Page.new GodTools.get "#{ base_path }/pages/#{ page_id }"
     end
 
     private
@@ -31,5 +31,6 @@ module GodTools
       class Page < Hashie::Trash
         property 'translated_strings', from: 'translatedStrings'
       end
+
   end
 end
