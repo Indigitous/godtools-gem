@@ -16,20 +16,20 @@ module GodTools
       Page.new GodTools.get "#{ base_path }/pages/#{ page_id }"
     end
 
+    class Config < Hashie::Trash
+      property 'about', transform_with: lambda { |v| Hashie::Mash.new(v) }
+      property 'page_set', from: 'pageSet', with: lambda { |v| v.collect { |e| Hashie::Mash.new(e) } }
+      property 'package_name', from: 'packageName', with: lambda { |v| Hashie::Mash.new(v) }
+    end
+
+    class Page < Hashie::Trash
+      property 'translated_strings', from: 'translatedStrings'
+    end
+
     private
 
       def base_path
         "/translations/#{ @language }/#{ @package }"
-      end
-
-      class Config < Hashie::Trash
-        property 'about', transform_with: lambda { |v| Hashie::Mash.new(v) }
-        property 'page_set', from: 'pageSet', with: lambda { |v| v.collect { |e| Hashie::Mash.new(e) } }
-        property 'package_name', from: 'packageName', with: lambda { |v| Hashie::Mash.new(v) }
-      end
-
-      class Page < Hashie::Trash
-        property 'translated_strings', from: 'translatedStrings'
       end
 
   end

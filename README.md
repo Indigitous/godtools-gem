@@ -47,11 +47,11 @@ If you don't have a key you can request one (this will also set it automatically
 ### Meta
 
 ```ruby
-response = GodTools::Meta.all
- => #<Hashie::Mash languages=[#<Hashie::Mash code="ta" name="Tamil" packages=[]>, ... ]>
+response = GodTools::Meta.all_languages
+ => [#<GodTools::Meta::Language code="th" name="Thai" packages=[#<Hashie::Mash code="kgp" status="live" version="1.1">, ...
 
-response.languages.first.code
- => "ta"
+response.first.code
+ => "th"
 ```
 
 ### Translations
@@ -61,7 +61,7 @@ translation = GodTools::Translations.new(language: 'en', package: 'kgp')
  => #<GodTools::Translations:0x007fc4b0a375b0 @language="en", @package="kgp">
 
 translation.config
- => #<GodTools::Translations::Config about=#<Hashie::Mash filename="" title="About"> ... >
+ => #<GodTools::Translations::Config about=#<Hashie::Mash filename="" title="About"> ...
 
 translation.config.page_set.first.filename
  => "a348a98b-77b1-4542-931c-c1af41bd206e"
