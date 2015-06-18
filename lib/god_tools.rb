@@ -31,4 +31,27 @@ module GodTools
     self.authorization_key = self.request_authorization_key
   end
 
+  %w(copy delete get head move options patch post put).each do |name|
+    define_singleton_method name do |*args, &block|
+      handle_response super(*args, &block)
+    end
+  end
+
+  private
+
+    def self.handle_response(response)
+      case response.code
+      when 200..299
+        response
+      else
+        raise ResponseError.new response
+      end
+    end
+
+  class ResponseError < HTTParty::ResponseError
+    def to_s
+      [super, "Response Code #{ response.code }", 'Response Body:', response.body].join "\n"
+    end
+  end
+
 end
