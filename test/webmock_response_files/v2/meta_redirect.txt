@@ -1,0 +1,7 @@
+HTTP/1.1 301 Moved Permanently
+Date: Tue, 22 Sep 2015 18:31:56 GMT
+Location: https://s3.amazonaws.com/cru-godtools/meta/all.json
+Server: WildFly/8
+X-Powered-By: Undertow/1
+Content-Length: 0
+Connection: keep-alive

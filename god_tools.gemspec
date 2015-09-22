@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'god_tools'
-  s.version     = '0.0.0'
+  s.version     = '0.1.0'
   s.date        = '2015-04-01'
   s.summary     = 'Ruby bindings for the Cru GodTools API'
   s.description = 'For more about the API see https://github.com/CruGlobal/godtools-api'

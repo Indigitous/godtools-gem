@@ -2,7 +2,7 @@ module GodTools
   class Meta
 
     def self.all_languages
-      meta = Hashie::Mash.new GodTools.get '/meta'
+      meta = Hashie::Mash.new JSON.parse GodTools.get('/v2/meta').body
       meta.languages.collect { |language_meta| Language.new(language_meta) }
     end
 

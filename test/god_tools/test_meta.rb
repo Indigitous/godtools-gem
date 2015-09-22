@@ -6,8 +6,8 @@ module GodTools
     def test_all_languages
       all_languages = GodTools::Meta.all_languages
       assert_kind_of Array, all_languages
-      assert_equal 26, all_languages.size
-      assert_equal 'satisfied', all_languages.first.packages.first.code
+      assert_equal 47, all_languages.size
+      assert_equal 'fourlaws', all_languages.first.packages.first.code
       all_languages.each do |language|
         assert_kind_of GodTools::Meta::Language, language
       end
